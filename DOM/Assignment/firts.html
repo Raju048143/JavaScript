@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hii</h1>
+    <button id = "start">Start</button>
+    <button id = "stop">Stop</button>
+</body>
+<script>
+   const say = function say(str) {
+    console.log(str);
+};
+
+let setInter = setInterval(say, 1000, "hii"); 
+
+document.querySelector("#start").addEventListener('click', function () {
+    clearInterval(setInter); 
+    setInter = setInterval(say, 1000, "Raju");
+});
+
+document.querySelector("#stop").addEventListener('click', function () {
+    clearInterval(setInter);
+});
+
+</script>
+</html>
